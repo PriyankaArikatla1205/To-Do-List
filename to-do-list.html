@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-Do-List</title>
+    <link rel= "stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+         $("#to").change(function(){
+                  var into = $(this).val();
+                  $("ul").append('<li>'+ into +                ' <i class ="fas fa-check"></i>                <i class="fas fa-trash"></i> </li>');
+                  $(this).val(" ");
+
+
+              });
+
+          
+          $("ul").on("click",".fa-trash",function(){
+                    $(this).parent("li").fadeOut(200);
+          });
+          $("ul").on("click",".fa-check",function(){
+                    $(this).parent("li").css({"backgroundColor":"green","textDecoration":"line-through"});
+          });
+        });
+     
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;"> To-Do-List</h1>
+        
+        <input id="to" type="text" placeholder="Add a New Task">
+      <ul></ul>
+    </div>
+    <style>
+       
+    .container{
+        text-align: center;
+         color:red;
+      background: rgba(0, 239, 223, 0.976);
+      box-sizing: border-box;
+      text-transform: capitalize;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+       height:450px;
+       width:350px;
+        }
+        #to{
+           height :30px;
+           border: 3px  solid black ;
+           border-radius: 5px; 
+        }
+        ul li{
+           background:#eee;
+           color:#333;
+           height:20px;
+    position: relative;
+           border-radius:50px;
+           margin:5px 0;
+           padding: 10px;
+        }
+        ul .fa-check ,.fa-trash{
+        position: relative;
+            cursor: pointer;
+        }
+
+
+
+
+   
+    </style>
+</body>
+</html>
