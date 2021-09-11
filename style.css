@@ -1,0 +1,28 @@
+.container{
+    text-align: center;
+     color:red;
+  background: rgba(0, 239, 223, 0.976);
+  box-sizing: border-box;
+  text-transform: capitalize;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+   height:450px;
+   width:350px;
+    }
+    #to{
+       height :30px;
+       border: 3px  solid black ;
+       border-radius: 5px; 
+    }
+    ul li{
+       background:#eee;
+       color:#333;
+       height:20px;
+position: relative;
+       border-radius:50px;
+       margin:5px 0;
+       padding: 10px;
+    }
+    ul .fa-check ,.fa-trash{
+    position: relative;
+        cursor: pointer;
+    }
